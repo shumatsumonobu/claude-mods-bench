@@ -1,0 +1,29 @@
+{
+  "name": "mod-permissions",
+  "version": "0.1.2",
+  "description": "入れたほかの mod の通信・コマンド・ファイル操作を、実行前に止めて確認し、mod ごとに許すかを決める",
+  "author": {
+    "name": "週末ものづくり部"
+  },
+  "userConfig": {
+    "mode": {
+      "type": "string",
+      "title": "When not allowed",
+      "description": "ask: pause and ask on screen / log only: let it run, just record / block: block without asking",
+      "required": false,
+      "default": "ask",
+      "options": [
+        "ask",
+        "log only",
+        "block"
+      ]
+    },
+    "waitSeconds": {
+      "type": "number",
+      "title": "Seconds to wait",
+      "description": "block the call if there is no answer within this many seconds",
+      "required": false,
+      "default": 60
+    }
+  }
+}

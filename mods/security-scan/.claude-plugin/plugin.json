@@ -1,0 +1,22 @@
+{
+  "name": "security-scan",
+  "version": "0.1.1",
+  "description": "変更中のファイルを Semgrep で調べ、見つかった脆弱性を画面の右で1件ずつふるい分けて、本物だけ Claude に直させる",
+  "author": { "name": "週末ものづくり部" },
+  "userConfig": {
+    "semgrep": {
+      "type": "string",
+      "title": "Semgrep command",
+      "description": "Semgrep の実行ファイル。PATH にあれば semgrep のまま、無ければフルパス（例: C:/tools/semgrep/Scripts/semgrep.exe）",
+      "required": false,
+      "default": "semgrep"
+    },
+    "rules": {
+      "type": "string",
+      "title": "Rule sets",
+      "description": "Semgrep のルールの組をカンマ区切りで（例: p/nodejsscan,p/owasp-top-ten）",
+      "required": false,
+      "default": "p/nodejsscan,p/owasp-top-ten"
+    }
+  }
+}

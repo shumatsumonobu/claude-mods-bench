@@ -1,0 +1,45 @@
+{
+  "name": "claude-mods-bench",
+  "description": "Claude Code の mod 4本 ── ほかの mod の確認、Claude が触ったファイルの一覧、セッション別の使用量、変更中のコードの脆弱性のふるい分け",
+  "owner": {
+    "name": "週末ものづくり部"
+  },
+  "plugins": [
+    {
+      "name": "mod-permissions",
+      "description": "入れたほかの mod の通信・コマンド・ファイル操作を、実行前に止めて確認し、mod ごとに許すかを決める",
+      "author": {
+        "name": "週末ものづくり部"
+      },
+      "source": "./mods/mod-permissions",
+      "category": "security"
+    },
+    {
+      "name": "file-map",
+      "description": "Claude が読んだファイル・書き換えたファイルを、画面の右に一覧表示（最初の読み書きで自動で開く）",
+      "author": {
+        "name": "週末ものづくり部"
+      },
+      "source": "./mods/file-map",
+      "category": "visualization"
+    },
+    {
+      "name": "session-usage",
+      "description": "週の利用上限を、どのセッションが使ったかをグラフで表示（起動すると画面の右に自動で開く）",
+      "author": {
+        "name": "週末ものづくり部"
+      },
+      "source": "./mods/session-usage",
+      "category": "visualization"
+    },
+    {
+      "name": "security-scan",
+      "description": "変更中のファイルを Semgrep で調べ、見つかった脆弱性を画面の右で1件ずつふるい分けて、本物だけ Claude に直させる",
+      "author": {
+        "name": "週末ものづくり部"
+      },
+      "source": "./mods/security-scan",
+      "category": "security"
+    }
+  ]
+}
