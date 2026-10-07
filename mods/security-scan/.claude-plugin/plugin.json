@@ -1,0 +1,22 @@
+{
+  "name": "security-scan",
+  "version": "0.1.2",
+  "description": "変更中のファイルを Semgrep で検査し、検出結果を画面の右で1件ずつ選別、本物だけ Claude に修正を依頼",
+  "author": { "name": "週末ものづくり部" },
+  "userConfig": {
+    "semgrep": {
+      "type": "string",
+      "title": "Semgrep command",
+      "description": "Semgrep の実行ファイル。PATH にあれば semgrep のまま、無ければフルパス（例: C:/tools/semgrep/Scripts/semgrep.exe）",
+      "required": false,
+      "default": "semgrep"
+    },
+    "rules": {
+      "type": "string",
+      "title": "Rule sets",
+      "description": "Semgrep のルールの組をカンマ区切りで（例: p/nodejsscan,p/owasp-top-ten）",
+      "required": false,
+      "default": "p/nodejsscan,p/owasp-top-ten"
+    }
+  }
+}

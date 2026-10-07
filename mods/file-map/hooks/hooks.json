@@ -1,0 +1,6 @@
+{
+  "description": "Claude のファイルの読み書きを数え、画面の右に一覧を開く",
+  "modules": [
+    "./register.ts"
+  ]
+}
